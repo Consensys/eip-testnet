@@ -12,6 +12,11 @@ gethDataDir()  {
 	echo "$GETH_DATA_DIR/$NODE_ID"
 }
 
+gethNodeKeyFile()  {
+	NODE_ID=$1
+	echo "$EIP1559_GETH_NODE_KEY_FILE-$NODE_ID"
+}
+
 gethKeyFile()  {
 	NODE_ID=$1
 	echo "$EIP1559_GETH_ACCOUNT_KEY_FILE-$NODE_ID"
