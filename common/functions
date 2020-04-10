@@ -12,7 +12,17 @@ gethDataDir()  {
 	echo "$GETH_DATA_DIR/$NODE_ID"
 }
 
+besuDataDir()  {
+	NODE_ID=$1
+	echo "$BESU_DATA/$NODE_ID"
+}
+
 gethNodeKeyFile()  {
+	NODE_ID=$1
+	echo "$EIP1559_GETH_NODE_KEY_FILE-$NODE_ID"
+}
+
+besuNodeKeyFile()  {
 	NODE_ID=$1
 	echo "$EIP1559_GETH_NODE_KEY_FILE-$NODE_ID"
 }
@@ -49,5 +59,5 @@ getBesuLogFile()  {
 }
 
 runBesu() {
-	run "$BESU_PATH $1 --data-path=$BESU_DATA --rpc-http-cors-origins=all --discovery-enabled=false --rpc-http-enabled --network=dev --rpc-http-apis=ETH,NET,WEB3,DEBUG,ADMIN,TRACE,PLUGINS  --p2p-port=30301 --rpc-http-port=9000"
+	run "$BESU_PATH $1 --genesis-file=$EIP1559_BESU_GENESIS --data-path=$BESU_DATA --rpc-http-cors-origins=all --discovery-enabled=false --rpc-http-enabled --rpc-http-apis=ETH,NET,WEB3,DEBUG,ADMIN,TRACE,PLUGINS  --p2p-port=30305 --rpc-http-port=8547"
 }

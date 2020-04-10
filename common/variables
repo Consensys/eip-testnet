@@ -4,12 +4,12 @@ set -e
 BESU_PATH=${ENV_BESU_PATH:-"besu"}
 
 DIR="$PWD"
-BESU_DATA_DIR="$DIR/data"
-BESU_DATA="$BESU_DATA_DIR/besu"
 PLUGIN_DIR=${ENV_PLUGIN_DIR:-"$DIR/plugins"}
 APP_DIR="$DIR/apps"
 INPUT_DIR="$DIR/input"
 OUT_DIR="$DIR/out"
+BESU_DATA_DIR="$OUT_DIR/besu/data"
+BESU_DATA="$BESU_DATA_DIR"
 
 export BESU_OPTS=${ENV_BESU_OPTS:-"-Dbesu.plugins.dir=$PLUGIN_DIR"}
 
@@ -33,3 +33,8 @@ RUN_GETH_MINER_SCRIPT="$DIR/eip1559/geth/run-geth-miner.sh"
 RUN_GETH_INIT_SCRIPT="$DIR/eip1559/geth/init.sh"
 RUN_GETH_IMPORT_ACCOUNT_SCRIPT="$DIR/eip1559/geth/import-geth-account.sh"
 COINBASE="0xfe3b557e8fb62b89f4916b721be55ceb828dbd73"
+EIP1559_BESU_GENESIS="$DIR/eip1559/besu/genesis.json"
+EIP1559_BESU_NODE_KEY_FILE="$DIR/eip1559/besu/keystore/node-key"
+EIP1559_STATIC_NODES="$DIR/eip1559/static-nodes.json"
+RUN_BESU_SCRIPT="$DIR/eip1559/besu/run-besu.sh"
+EIP1559_BESU_NODE_WHITELIST="$DIR/eip1559/besu/permissions_config.toml"

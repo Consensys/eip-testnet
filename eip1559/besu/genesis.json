@@ -1,9 +1,9 @@
 {
   "config": {
     "chainId": 555555,
-    "homesteadBlock": 0
+    "homesteadBlock": 0,
+    "ethash": {}
   },
-  "timestamp": "0x0",
   "gasLimit": "0x200B20",
   "difficulty": "0x400",
   "alloc": {

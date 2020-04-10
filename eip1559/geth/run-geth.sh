@@ -12,7 +12,6 @@ P2P_PORT="$(($NODE_ID + 30302))"
 
 BOOTNODE=$(cat $EIP1559_GETH_BOOTNODE_URL)
 $GETH_PATH --datadir $DATA_DIR \
---nodiscover \
 --ipcdisable \
 --port $P2P_PORT --networkid $EIP1559_NETWORK_ID \
 --rpc --rpcport $RPC_PORT --rpcaddr 0.0.0.0 \
