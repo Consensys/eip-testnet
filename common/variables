@@ -1,0 +1,28 @@
+#!/bin/bash
+set -e
+
+BESU_PATH=${ENV_BESU_PATH:-"besu"}
+
+DIR="$PWD"
+BESU_DATA_DIR="$DIR/data"
+BESU_DATA="$BESU_DATA_DIR/besu"
+PLUGIN_DIR=${ENV_PLUGIN_DIR:-"$DIR/plugins"}
+APP_DIR="$DIR/apps"
+INPUT_DIR="$DIR/input"
+OUT_DIR="$DIR/out"
+
+export BESU_OPTS=${ENV_BESU_OPTS:-"-Dbesu.plugins.dir=$PLUGIN_DIR"}
+
+GETH_PATH=${ENV_GETH_PATH:-"geth"}
+BOOTNODE_PATH=${ENV_BOOTNODE_PATH:-"bootnode"}
+GETH_DATA_DIR="$OUT_DIR/geth/data"
+EIP1559_GETH_GENESIS="$DIR/eip1559/geth/genesis.json"
+EIP1559_GETH_BOOTKEY="$DIR/eip1559/geth/boot.key"
+EIP1559_GETH_BOOTNODE_URL="$DIR/eip1559/geth/boot.url"
+EIP1559_NETWORK_ID=555555
+EIP1559_GETH_ACCOUNT_KEY_FILE="$DIR/eip1559/geth/keystore/geth-priv-key"
+EIP1559_GETH_ACCOUNT_PASSWORD="$DIR/eip1559/geth/keystore/geth-pwd"
+EIP1559_GETH_LOGFILE="$OUT_DIR/geth/log"
+EIP1559_BESU_LOGFILE="$OUT_DIR/besu/log"
+
+RUN_GETH_SCRIPT="$DIR/eip1559/geth/run-geth.sh"

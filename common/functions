@@ -1,0 +1,37 @@
+#!/bin/bash
+set -e
+run()  {
+	CMD=$1
+	echo $CMD
+	eval $CMD
+	echo "\n"
+}
+
+gethDataDir()  {
+	NODE_ID=$1
+	echo "$GETH_DATA_DIR/$NODE_ID"
+}
+
+gethKeyFile()  {
+	NODE_ID=$1
+	echo "$EIP1559_GETH_ACCOUNT_KEY_FILE-$NODE_ID"
+}
+
+gethPwdFile()  {
+	NODE_ID=$1
+	echo "$EIP1559_GETH_ACCOUNT_PASSWORD-$NODE_ID"
+}
+
+getGethLogFile()  {
+	NODE_ID=$1
+	echo "$EIP1559_GETH_LOGFILE-$NODE_ID"
+}
+
+getBesuLogFile()  {
+	NODE_ID=$1
+	echo "$EIP1559_BESU_LOGFILE-$NODE_ID"
+}
+
+runBesu() {
+	run "$BESU_PATH $1 --data-path=$BESU_DATA --rpc-http-cors-origins=all --discovery-enabled=false --rpc-http-enabled --network=dev --rpc-http-apis=ETH,NET,WEB3,DEBUG,ADMIN,TRACE,PLUGINS  --p2p-port=30301 --rpc-http-port=9000"
+}
