@@ -17,6 +17,17 @@ gethKeyFile()  {
 	echo "$EIP1559_GETH_ACCOUNT_KEY_FILE-$NODE_ID"
 }
 
+gethStaticNodes()  {
+	NODE_ID=$1
+	echo "$EIP1559_GETH_STATIC_NODES-$NODE_ID.json"
+}
+
+gethStaticNodesOut()  {
+	NODE_ID=$1
+	DATA_DIR=$(gethDataDir $NODE_ID)
+	echo "$DATA_DIR/geth/static-nodes.json"
+}
+
 gethPwdFile()  {
 	NODE_ID=$1
 	echo "$EIP1559_GETH_ACCOUNT_PASSWORD-$NODE_ID"

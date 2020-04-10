@@ -10,38 +10,20 @@ https://eips.ethereum.org/EIPS/eip-1559
 | geth-node-2 | 627306090abaB3A6e1400e9345bC60c78a8BEf57 | 8546     | 30304    |
 | besu-node   | f17f52151EbEF6C7334FAD080c5704D77216b732 | 8547     | 30305    |
 
+## Setup
+
+```sh
+sh eip1559/setup.sh
+```
+
 ## Deploy network
 
 ```sh
 sh eip1559/deploy-network.sh
 ```
 
-## Setup
+## Setup and deploy network
 
-Init geth genesis
 ```sh
-sh eip1559/geth-init.sh
-```
-
-Run geth bootnode
-```sh
-sh eip1559/geth-run-bootnode.sh
-```
-
-List geth accounts
-```sh
-sh eip1559/geth/account-list.sh NODE_ID
-#sh eip1559/geth/account-list.sh 1
-```
-
-Import geth account
-```sh
-sh eip1559/geth/import-geth-account.sh NODE_ID
-#sh eip1559/geth/import-geth-account.sh 1
-```
-
-Run geth node
-```sh
-sh eip1559/geth/run-geth.sh NODE_ID
-#sh eip1559/geth/run-geth.sh 1
+sh eip1559/bootstrap.sh
 ```

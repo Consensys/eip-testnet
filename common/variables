@@ -22,9 +22,11 @@ EIP1559_GETH_BOOTNODE_URL="$DIR/eip1559/geth/boot.url"
 EIP1559_NETWORK_ID=555555
 EIP1559_GETH_ACCOUNT_KEY_FILE="$DIR/eip1559/geth/keystore/geth-priv-key"
 EIP1559_GETH_ACCOUNT_PASSWORD="$DIR/eip1559/geth/keystore/geth-pwd"
+EIP1559_GETH_STATIC_NODES="$DIR/eip1559/geth/static-nodes"
 EIP1559_GETH_LOGFILE="$OUT_DIR/geth/log"
 EIP1559_BESU_LOGFILE="$OUT_DIR/besu/log"
-
+EIP1559_SETUP_SCRIPT="$DIR/eip1559/setup.sh"
+EIP1559_DEPLOY_SCRIPT="$DIR/eip1559/deploy-network.sh"
 RUN_GETH_SCRIPT="$DIR/eip1559/geth/run-geth.sh"
 RUN_GETH_MINER_SCRIPT="$DIR/eip1559/geth/run-geth-miner.sh"
 RUN_GETH_INIT_SCRIPT="$DIR/eip1559/geth/init.sh"
