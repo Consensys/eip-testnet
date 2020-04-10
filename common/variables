@@ -26,3 +26,7 @@ EIP1559_GETH_LOGFILE="$OUT_DIR/geth/log"
 EIP1559_BESU_LOGFILE="$OUT_DIR/besu/log"
 
 RUN_GETH_SCRIPT="$DIR/eip1559/geth/run-geth.sh"
+RUN_GETH_MINER_SCRIPT="$DIR/eip1559/geth/run-geth-miner.sh"
+RUN_GETH_INIT_SCRIPT="$DIR/eip1559/geth/init.sh"
+RUN_GETH_IMPORT_ACCOUNT_SCRIPT="$DIR/eip1559/geth/import-geth-account.sh"
+COINBASE="0xfe3b557e8fb62b89f4916b721be55ceb828dbd73"

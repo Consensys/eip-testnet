@@ -14,7 +14,8 @@ $GETH_PATH --datadir $DATA_DIR \
 --bootnodes $BOOTNODE \
 --port $P2P_PORT --networkid $EIP1559_NETWORK_ID \
 --rpc --rpcport $RPC_PORT --nodiscover --rpcaddr 0.0.0.0 \
---rpcapi "admin,web3,eth,net,personal,txpool" --rpccorsdomain "0.0.0.0" \
---txpool.nolocals --rpcvhosts=*  --nousb --etherbase $COINBASE \
+--rpcapi "admin,web3,eth,net,personal,miner,txpool" --rpccorsdomain "0.0.0.0" \
+--mine --minerthreads=1 --miner.gasprice=1  \
+--txpool.nolocals --rpcvhosts=*  --nousb --etherbase 0 \
 --unlock 0 --allow-insecure-unlock \
 --password $PWD_FILE
