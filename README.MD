@@ -37,3 +37,15 @@ sh eip1559/deploy-network.sh
 ```sh
 sh eip1559/bootstrap.sh
 ```
+
+### Send transactions
+#### Legacy transactions
+
+```sh
+sh eip1559/tx-legacy.sh 0 true http://127.0.0.1:8545
+```
+#### EIP-1559 transactions
+
+```sh
+sh eip1559/tx-eip1559.sh 1 true http://127.0.0.1:8545
+```

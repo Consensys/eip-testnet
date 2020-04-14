@@ -15,7 +15,7 @@ $GETH_PATH --datadir $DATA_DIR \
 --ipcdisable \
 --port $P2P_PORT --networkid $EIP1559_NETWORK_ID \
 --rpc --rpcport $RPC_PORT --rpcaddr 0.0.0.0 \
---rpcapi "admin,web3,eth,net,personal,txpool" --rpccorsdomain "0.0.0.0" \
+--rpcapi "admin,web3,eth,net,personal,txpool,debug" --rpccorsdomain "0.0.0.0" \
 --rpcvhosts=*  --nousb --etherbase $COINBASE \
 --unlock 0 --allow-insecure-unlock \
 --password $PWD_FILE \
