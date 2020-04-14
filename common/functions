@@ -24,7 +24,7 @@ gethNodeKeyFile()  {
 
 besuNodeKeyFile()  {
 	NODE_ID=$1
-	echo "$EIP1559_GETH_NODE_KEY_FILE-$NODE_ID"
+	echo "$EIP1559_BESU_NODE_KEY_FILE-$NODE_ID"
 }
 
 gethKeyFile()  {
