@@ -2,6 +2,16 @@
   "config": {
     "chainId": 555555,
     "homesteadBlock": 1,
+    "daoForkSupport": false,
+    "eip150Block": 2,
+    "eip155Block": 3,
+    "eip158Block": 4,
+    "byzantiumBlock": 5,
+    "constantinopleBlock": 6,
+    "constantinopleFixBlock": 7,
+    "istanbulBlock": 8,
+    "muirGlacierBlock": 9,
+    "eip1559block": 10,
     "ethash": {}
   },
   "gasLimit": "0x200B20",

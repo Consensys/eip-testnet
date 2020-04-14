@@ -1,7 +1,16 @@
 {
     "config": {
         "chainId": 555555,
-        "homesteadBlock": 1
+        "homesteadBlock": 1,
+        "eip150Block": 2,
+        "eip155Block": 3,
+        "eip158Block": 4,
+        "byzantiumBlock": 5,
+        "constantinopleBlock": 6,
+        "petersburgBlock": 7,
+        "istanbulBlock": 8,
+        "muirGlacierBlock": 9,
+        "eip1559block": 10
     },
     "difficulty": "0x400",
     "gasLimit": "2100000",

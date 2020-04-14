@@ -11,4 +11,5 @@ $BESU_PATH --genesis-file=$EIP1559_BESU_GENESIS \
 --data-path=$DATA_DIR --rpc-http-cors-origins=all --discovery-enabled=false \
 --rpc-http-enabled --rpc-http-apis=ETH,NET,WEB3,DEBUG,ADMIN,TRACE,PLUGINS  \
 --p2p-enabled=true --p2p-port=30305 --rpc-http-port=8547 \
+--Xeip1559-enabled=true \
 --logging=info
