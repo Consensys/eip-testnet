@@ -1,7 +1,7 @@
 {
     "config": {
         "chainId": 555555,
-        "homesteadBlock": 0
+        "homesteadBlock": 1
     },
     "difficulty": "0x400",
     "gasLimit": "2100000",

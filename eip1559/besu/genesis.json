@@ -1,7 +1,7 @@
 {
   "config": {
     "chainId": 555555,
-    "homesteadBlock": 0,
+    "homesteadBlock": 1,
     "ethash": {}
   },
   "gasLimit": "0x200B20",
