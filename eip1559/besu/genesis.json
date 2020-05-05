@@ -12,7 +12,9 @@
     "istanbulBlock": 8,
     "muirGlacierBlock": 9,
     "eip1559block": 10,
-    "ethash": {}
+    "ethash": {
+      "fixeddifficulty": 400
+    }
   },
   "gasLimit": "0x200B20",
   "difficulty": "0x400",
