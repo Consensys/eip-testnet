@@ -1,0 +1,9 @@
+windows:
+  - name: sample-eip1559
+    root: $EIP1559_ROOT
+    layout: tiled
+    panes:
+      - ./menu.sh
+      - tail -fn 10 ./out/besu/log-1
+      - tail -fn 10 ./out/geth/log-1
+      - tail -fn 10 ./out/geth/log-2

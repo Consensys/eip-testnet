@@ -61,3 +61,8 @@ getBesuLogFile()  {
 runBesu() {
 	run "$BESU_PATH $1 --genesis-file=$EIP1559_BESU_GENESIS --data-path=$BESU_DATA --rpc-http-cors-origins=all --discovery-enabled=false --rpc-http-enabled --rpc-http-apis=ETH,NET,WEB3,DEBUG,ADMIN,TRACE,PLUGINS  --p2p-port=30305 --rpc-http-port=8547"
 }
+
+
+function clearLastLine() {
+        tput cuu 1 && tput el
+}

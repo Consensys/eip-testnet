@@ -39,3 +39,12 @@ EIP1559_STATIC_NODES="$DIR/eip1559/static-nodes.json"
 RUN_BESU_SCRIPT="$DIR/eip1559/besu/run-besu.sh"
 RUN_BESU_MINER_SCRIPT="$DIR/eip1559/besu/run-besu-miner.sh"
 EIP1559_BESU_NODE_WHITELIST="$DIR/eip1559/besu/permissions_config.toml"
+
+
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+LIGHT_BLUE='\033[1;34m'
+LIGHT_PURPLE='\033[1;35m'
+NC='\033[0m' # No Color
+SEPARATOR="======================"
