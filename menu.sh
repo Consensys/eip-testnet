@@ -2,6 +2,7 @@
 source common/variables
 source common/functions
 
+clear
 echo -e $SEPARATOR
 echo -e "${GREEN}EIP-1559 menu${NC}"
 echo -e $SEPARATOR
