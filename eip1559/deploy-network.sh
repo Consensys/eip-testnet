@@ -11,11 +11,11 @@ BESU_NODE_2_LOG=$(getBesuLogFile 2)
 ##########################################################
 # 1 geth miner - 1 geth - 1 besu
 echo "starting geth node 1"
-sh $RUN_GETH_SCRIPT "1" 2> $GETH_NODE_1_LOG &
+sh $RUN_GETH_MINER_SCRIPT "1" 2> $GETH_NODE_1_LOG &
 echo "starting geth node 2"
 sh $RUN_GETH_SCRIPT "2" 2> $GETH_NODE_2_LOG &
 echo "starting besu node 1"
-sh $RUN_BESU_MINER_SCRIPT "1" > $BESU_NODE_1_LOG &
+sh $RUN_BESU_SCRIPT "1" > $BESU_NODE_1_LOG &
 ##########################################################
 
 ##########################################################
